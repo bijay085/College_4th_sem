@@ -1,0 +1,78 @@
+signup.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - JavaScript Validation</title>
+    <link href="signup.css" rel="stylesheet" type="text/css">
+</head> 
+<body>
+    <!-- Form HTML -->
+    <script src="signup.js" type="text/javascript"></script>
+</body>
+</html>
+signup.css
+/* Style for Form goes here... */
+signup.js
+//JavaScript validation for Form 
+
+
+HTML:
+start form structure
+
+CSS:
+start form CSS
+
+JS:
+start form JS
+
+
+
+===================
+Data handling with form to store inside database
+
+-------------           --------------------                -------------
+   Form Page              Logical Program                     Database
+-------------           --------------------                -------------
+
+User Submission         Data Logic and Validation           Store
+
+Through Form fields     Catch the data from form field      Data with data types
+                        Using field name as a handle or 
+                        variable
+
+                        Controller of View and Model
+                        (MVC)
+
+                        So, We have MVC framework (ie.: laravel of PHP)
+                        M - Model       (Database SQL logics)
+                        V - View        (Cient/HTML Pages)
+                        C - Controller  (Pure Programming Logics to controll M & V)
+
+
+
+
+
+
+Form data submission format:
+- Single line text data (work with GET or POST method)
+        - ie.: "info@email.com" or "Your Name"  <- single string
+- Multi line text data (work with GET or POST method)
+        - ie.: "message
+                multi 
+                line"   <- single string
+- Multi valued data (work with FILES method)
+        - ie.: file data 
+            - name          "everest"
+            - path          "images/"
+            - temp_name     "tmpeve"
+            - temp_path     "filepath/"
+            - MIME type (extensions: ie: *.jpg, *.png, *.pdf, *.docx etc.)
+
+            <- multiple string (It requires enctype="multipart/form-data" attribute)
+
+            
+
+
+

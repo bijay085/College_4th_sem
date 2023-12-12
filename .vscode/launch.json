@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/Scripting language/JS/SignUp_Validation/JS_Questions/q2.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/Scripting language/JS/SignUp_Validation/JS_Questions/q2.html"
+        }
+    ]
+}
