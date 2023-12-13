@@ -40,6 +40,7 @@ body{
     display: block;
     margin-bottom: 5px;
     color: #333;
+
   }
   .error{
     color: rgb(240, 63, 63);
@@ -56,7 +57,9 @@ body{
   
   input[type="radio"],
   input[type="checkbox"] {
+    width: auto; 
     margin-right: 5px;
+    display: flex;
   }
   
   /* Styles for buttons */
@@ -72,10 +75,12 @@ body{
     cursor: pointer;
     background-color: #007bff;
     color: #fff;
+
   }
   
   button[type="submit"]:hover,
   button[type="reset"]:hover {
     background-color: #0056b3;
+   
   }
 

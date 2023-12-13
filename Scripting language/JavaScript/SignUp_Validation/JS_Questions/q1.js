@@ -5,30 +5,42 @@ let form = document.mForm;
 let fname = form.fname;
 let email = form.email;
 let phone = form.phone;
-// let gender = form.gender;
+let gender = form.gender;
 let address = form.address;
 let msg = form.message;
 
-let span = document.createElement("span");
-span.classList.add('error');
-console.log(fname.parentElement);
-fname.parentElement.append(span);
 
-let errphone = document.createElement("span");
-errphone.classList.add('error');
-phone.parentElement.append(errphone);
 
-let erremail = document.createElement("span");
-erremail.classList.add('error');
-email.parentElement.append(erremail);
 
-let erraddress = document.createElement("span");
-erraddress.classList.add('error');
-address.parentElement.append(erraddress);
+// let errphone = document.createElement("span");
+// errphone.classList.add('error');
+// phone.parentElement.append(errphone);
 
-let errmsg = document.createElement("span");
-errmsg.classList.add('error');
-msg.parentElement.append(errmsg);
+// let erremail = document.createElement("span");
+// erremail.classList.add('error');
+// email.parentElement.append(erremail);
+
+// let erraddress = document.createElement("span");
+// erraddress.classList.add('error');
+// address.parentElement.append(erraddress);
+
+// let errmsg = document.createElement("span");
+// errmsg.classList.add('error');
+// msg.parentElement.append(errmsg);
+
+//loop of element to add new node/element instead of separate concept as above
+let eleArr = [email, phone, address, msg, gender];
+eleArr.forEach(item => {
+    let span = document.createElement("span");
+    span.classList.add('error');
+
+    if(item.length >= 0) {
+        item[0].parentElement.parentElement.append(span)
+    } else {
+        item.parentElement.append(span);
+    }
+});
+
 /*
 let errgender = document.createElement("span");
 errgender.classList.add('error');
@@ -61,18 +73,22 @@ form.addEventListener("submit", function(e){
         address.nextElementSibling.innerText = "Your address is missing";
         e.preventDefault();
     }
-    /*
-    if (gender.value=='') {
-        console.log("Gender not selected yet");
-        gender.nextElementSibling.innerText = "Gender not selected yet";
+    console.log(gender)
+    if (gender.value == '') {
+        gender[1].parentElement.nextElementSibling.innerText = "Gender not selected yet";
         e.preventDefault();
     }
-    */
+    
     if (msg.value=='') {
         console.log("No message/comment written yet");
         msg.nextElementSibling.innerText = "Please enter a comment";
         e.preventDefault();
     }
+});
+
+let resetBtn = document.querySelector("[name*='reset']");
+resetBtn.addEventListener("click", function() {
+    confirm("Are you sure to reset ?");
 });
 
 // KeyboardEvent
@@ -108,13 +124,23 @@ email.addEventListener("keyup", function()
     }
 });
 
+// phone.addEventListener("keyup", function(){
+//     console.log(phone.value);
+//     let conatinsAlphabets = /\d/.test(phone.value);
+//     if(conatinsAlphabets ) {
+//         console.log("Contact number must not have alphabets");
+//         phone.nextElementSibling.innerText = "Contact number must not have alphabets"
+//         e.preventDefault();
+//     }
+// });
+
 address.addEventListener("keyup", function(){
     let disallowedSymbols = /[!@#$%^&*()_+={}\[\]:;<>,.?/~\\|]/; // Define symbols not allowed
     
     console.log(address.value);
     if (disallowedSymbols.test(this.value)) {
         this.nextElementSibling.innerText = "Symbols not allowed in address";
-        // this.value = this.value.replace(disallowedSymbols, ''); // Remove disallowed symbols
+        this.value = this.value.replace(disallowedSymbols, ''); // Remove disallowed symbols
     } else {
         this.nextElementSibling.innerText = ""; // Clear error message if no disallowed symbols
     }
@@ -126,7 +152,7 @@ msg.addEventListener("keyup", function(){
 
     if (disallowedSymbols.test(this.value)) {
 
-        // errmsg.innerText = "Symbols not allowed in comment section";
+        errmsg.innerText = "Symbols not allowed in comment section";
         // this.value = this.value.replace(disallowedSymbols, ''); // Remove disallowed symbols
     } else {
         errmsg.innerText = ""; // Clear error message if no disallowed symbols

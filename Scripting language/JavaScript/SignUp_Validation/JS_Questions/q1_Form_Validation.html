@@ -31,8 +31,14 @@ Fields : - fullname , email, phone, gender, address, message.*/ -->
         </div>
         <div class="formField">
           <label for="gender">Gender</label>
-          <input type="radio" name="gender" id="gender" value="Male" />Male
-          <input type="radio" name="gender" id="gender" value="Female" />Female
+          <div class="formSubField">
+            <input type="radio" name="gender" id="male" value="Male" />
+            <label for="male">Male</label>
+          </div>
+          <div class="formSubField">
+            <input type="radio" name="gender" id="female" value="Female" />
+            <label for="female">Female</label>
+          </div>
         </div>
         <div class="formField">
           <label for="address">Address</label>
