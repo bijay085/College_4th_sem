@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional</title>
+</head>
+<body>
+    <hr>
+    
+    <script>
+/*
+        Default prototype of array: Array()
+        Default prototype of object: Object()
+*/
+        // Array Making 
+        let stdData = new Array("Your name", "Your email");
+        let stdDatas = ["Your name", "Your email"]; //array instance
+        // In js There is indexed array like above
+
+        // To make associative array we require object (Object is also an array)
+        // Object Making : use curly bracket {}
+
+        let students = {
+            "name": "Your Name",
+            "email" : "You email"
+        }
+
+        //Accessing array 
+        document.write(stdData[0]); //with index
+
+        // Accessing object 
+        document.write(students.name); //with key 
+/*
+        * object type :-
+            -builtin objects (Date(), Math() etc...)
+            - user defined objects (created by programmer)
+*/
+setInterval( function(){
+
+    let date = new Date();
+    let year = date.getFullYear(),
+    month = date.getMonth() + 1,
+    mDay = date.getDate(),
+    wDay = date.getDay() + 1,  //If we need to print number :: date.getDay() + 1;
+    hour = date.getHours(),
+    minute = date.getMinutes(),
+    second = date.getSeconds();
+    
+    let days = [ "Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday"];
+    let months = [ "January", "Feb", "March", "April","May", "June", "July", "August","Septemper", "October", "November", "December"];
+    
+    let fullDate = `${days[wDay]} ${mDay} ${months[month]} ${year} ${hour} ${minute} ${second}`;
+    
+}, 1000);
+
+    document.write(fullname);
+
+    </script>
+</body>
+</html>
