@@ -1,0 +1,11 @@
+Tasks : 
+-WS to print your cv using js array with loop
+-WS to print digital date-clock using js 
+-WS to calculate two operands, taking both operands and operator from user
+-Prepare and booking form and validate using regex
+-Differentiate scipt and noscript tags
+-WS to demonstrate JS fucntion
+-WS to demonstrate types of  JS object
+-WS to demostrate cookie in js
+-What is importance of client side scripting 
+-Draw DOM tree

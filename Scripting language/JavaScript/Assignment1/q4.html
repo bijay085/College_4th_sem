@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q4 Booking form</title>
+    <link rel="stylesheet" href="q4.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tour travel booking form</h1>
+        <form action="#" method="post" name="bForm" enctype="multipart/form-data">
+            <div class="input-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname">
+                <span class="error"></span>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="input-group">
+                <label for="address">Address:</label>
+                <input type="address" id="address" name="address">
+            </div>
+            <div class="input-group">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+            <hr class="hr1">
+            <div class="input-group">
+                <label for="food">You are ?:</label>
+                <select id="food" name="food">
+                    <option value="">Select</option>
+                    <option value="veg">Veg</option>
+                    <option value="nonVeg">Non veg</option>
+                    <option value="both">Both</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Where you want to visit:</label>
+                <input type="radio" id="foreign" name="place" value="foreign">
+                <label for="foreign">Foreign Country</label>
+                <input type="radio" id="nepal" name="place" value="nepal">
+                <label for="nepal">Nepal</label>
+            </div>
+            <div class="input-group">
+                <label for="aDate">When you want to go visit:</label>
+                <input type="date" id="aDate" name="aDate">
+            </div>
+            <hr class="hr1">
+            <div class="input-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="40" rows="5"></textarea>
+            </div>
+            <div class="input-group">
+                <button type="submit" name="submit">Register</button>
+                <button type="reset" name="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <script src="q4.js"></script>
+</body>
+
+</html>
