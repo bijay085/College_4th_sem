@@ -1,23 +1,34 @@
 // -WS to calculate two operands, taking both operands and operator from user
+let op1 = prompt("Enter first operand: ");
+let op2 = prompt("Enter second operand: ");
+let operator = prompt("Enter operator (+, -, *, /): ");
 
-let op1 = prompt("Enter the first operand");
-let op2 = prompt("Enter second number:");
-op2 = Number(op2);
+// changing into number 
 op1 = Number(op1);
+op2 = Number(op2);
+let result = 0;
 
-let sum = op1 + op2; // Addition
-let difference = op1 - op2; // Subtraction
-let product = op1 * op2; // Multiplication
-let quotient = op1 / op2; 
+// Perform the calculation based on the operator
+switch (operator) {
+    case '+':
+        result = op1 + op2;
+        break;
+    case '-':
+        result = op1 - op2;
+        break;
+    case '*':
+        result = op1 * op2;
+        break;
+    case '/':
+        if (op2 !== 0) {
+            result = op1 / op2;
+        } else {
+            document.write("Division by zero is not allowed.");
+        }
+        break;
+    default:
+        document.write("Invalid operator!<br>");
+        break;
+}
 
-document.write(sum + "<br>");
-document.write(difference+ "<br>");
-document.write(product+ "<br>");
-document.write(quotient+ "<br>");
-// console.log(sum);
-// console.log(difference);
-// console.log(product);
-// console.log(quotient);
-
-
-
+document.write("Result: " + result);
