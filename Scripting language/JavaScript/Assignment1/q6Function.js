@@ -25,15 +25,13 @@ let x = 4,
 
 
 // while creating function we dont use let, var or const but while making object we can use them 
-function AverageWithSumOne(m,n) {
+function AverageWithSumOne(m,n) { 
     return 1 + (m+n)/2;
 }
-
 
 console.log("Average of x and y with +1 is ", AverageWithSumOne(x , y));
 console.log("Average of x and z with +1 is ", AverageWithSumOne(x , z));
 console.log("Average of y and z with +1 is ", AverageWithSumOne(y , z));
-
 
 //simple function without parameter
 function print(){
