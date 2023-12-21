@@ -7,19 +7,20 @@ body{
     border: 1px solid black;
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 520px;
     justify-content: center;
 }
 
 .box{
-    margin-left: 10px;
+    margin-left: 80px;
     padding-bottom: 10px;
     text-align: center;
 }
 
 .input-group{
-    display: block;
+    display: flex;
     padding-bottom: 10px;
+    gap: 10px;
 }
 
 .input-group input[type="text"]{
@@ -36,7 +37,7 @@ body{
     background-color: rgba(54, 52, 52, 0.903);
     color: rgb(239, 236, 236); /* Text color */
     border: none;
-    padding: 8px;
+    padding: 8.3px;
 }
 .title, #res{
     text-align: center;
@@ -50,7 +51,7 @@ body{
 /* Button active/focus effect */
 .btn button:active,
 .btn button:focus {
-    background-color: #333; /* Change color when clicked or focused */
+    background-color: #0f0c0c; /* Change color when clicked or focused */
     color: #fff; /* Text color when clicked or focused */
     outline: none; /* Remove default focus outline */
 }
