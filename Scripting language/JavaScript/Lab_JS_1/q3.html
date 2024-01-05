@@ -7,20 +7,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q3</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="ore">
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto iusto nulla quos quae soluta quam nesciunt sint, impedit nihil, laborum veniam fugit, aperiam a facere obcaecati? Ipsum tempore quidem voluptates.</p>
+        <button id="btn" onclick="changeColor()"> Color change of paragraph on click</button>
+    </div>
+
     <script>
         //1st part :Write script to demonstrate popup boxes in JavaScript.
         let name = prompt("Whats your name ?");
         confirm("Are you sure that's your name ?");
         alert("Your name will be displayed here");
-
-        document.write(`Your name is : ${name}`);
-        console.log(name);
-
+        // document.write(`Your name is : ${name}\n`);
+        // console.log(name);
+        
         //part 2:  write script to change background color of  <p> tag on button click & append <span> as childnode of <p> creating from JS to demonstrate prepend &  remove DOM element with JS. 
-
+        function changeColor(){
+            document.getElementById('p1').style.color=red;
+        }
+        
     </script>
 </body>
 </html>
