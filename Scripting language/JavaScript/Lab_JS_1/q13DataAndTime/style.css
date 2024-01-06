@@ -1,0 +1,27 @@
+/* 13. Write a HTML, CSS, and JavaScript to create Digital Date/Time. And, demonstrate Math() object also.  */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+  }
+  
+  .digital-clock {
+    text-align: center;
+    border: 1px solid black;
+    padding: 1rem;
+  }
+  
+  #date {
+    font-size: 24px;
+  }
+  
+  #time {
+    font-size: 36px;
+    margin-top: -10px;
+  }
+  

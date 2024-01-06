@@ -1,7 +1,4 @@
-let rem = num%10;
-// let temp = rem;
-// num = num/10;
 
-// if(temp > num){
-
-// }
+// let regex = '';
+// let regexAll = /very/g;
+// console.log(Text.replace('ve

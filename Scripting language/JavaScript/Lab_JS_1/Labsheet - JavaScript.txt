@@ -5,7 +5,8 @@ Explain the concept, structure, and importance of the Document Object Model (DOM
 2. Write a JavaScript to print largest & smallest among 10 elements of an array. And, write script to print  largest & smallest among 5 digits of a number. 
 3. Write script to demonstrate popup boxes in JavaScript. And, write script to change background color of  <p> tag on button click & append <span> as childnode of <p> creating from JS to demonstrate prepend &  remove DOM element with JS. 
 4. Write a JavaScript to show/hide paragraph content. 
-5. What is Function? Write a program to demonstrate built-in and user-defined functions with all sub-types. 6. What is an Array? Write a program to demonstrate array with multiple-ways of creating an array including  listed tasks using property and methods from prototype: 
+5. What is Function? Write a program to demonstrate built-in and user-defined functions with all sub-types. 
+6. What is an Array? Write a program to demonstrate array with multiple-ways of creating an array including  listed tasks using property and methods from prototype: 
 - Check prototypes of Array() 
 - Add data as a first element on existing array. 
 - Add data as a last element on existing array. 
@@ -80,7 +81,9 @@ U N I V E R S I
 U N I V E R S I T 
 U N I V E R S I T Y
 19. Demonstrate JavaScript Window Load and Document Content Ready (page and window) event. Introduce jQuery. Write script to demonstrate jQuery. 
-20. Explain JS Types. And, JS Data Types with an example including comment types 21. Explain JavaScript closure and hoisting, variable scope and callback function, object literals vs.  constructor with example. 
+20. Explain JS Types. And, JS Data Types with an example including comment types 
+21. Explain JavaScript closure and hoisting, variable scope and callback function, object literals vs.  constructor with example. 
 22. Explain Template Literals/String and eval() method with an example. 
 23. Write a JavaScript to demonstrate Spread Operator, Rest Parameter and Function on variable. Explain  Exception Handling with an example including Try-Catch. 
-24. Explain JavaScript Errors types with an example including built-in error constructors. 25. Explain Regular Expression on JavaScript with an example.
+24. Explain JavaScript Errors types with an example including built-in error constructors. 
+25. Explain Regular Expression on JavaScript with an example.
