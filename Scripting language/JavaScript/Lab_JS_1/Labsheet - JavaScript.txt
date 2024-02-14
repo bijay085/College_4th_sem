@@ -1,0 +1,89 @@
+﻿Lab Report on JavaScript. 
+VVI: You need to submit and turn-in softcopy and bring hardcopy report binding all the answers. 
+1. What is JavaScript and DOM manipulation?  
+Explain the concept, structure, and importance of the Document Object Model (DOM) with DOM Tree. 
+2. Write a JavaScript to print largest & smallest among 10 elements of an array. And, write script to print  largest & smallest among 5 digits of a number. 
+3. Write script to demonstrate popup boxes in JavaScript. And, write script to change background color of  <p> tag on button click & append <span> as childnode of <p> creating from JS to demonstrate prepend &  remove DOM element with JS. 
+4. Write a JavaScript to show/hide paragraph content. 
+5. What is Function? Write a program to demonstrate built-in and user-defined functions with all sub-types. 
+6. What is an Array? Write a program to demonstrate array with multiple-ways of creating an array including  listed tasks using property and methods from prototype: 
+- Check prototypes of Array() 
+- Add data as a first element on existing array. 
+- Add data as a last element on existing array. 
+- Remove first element/data from existing array. 
+- Remove last element/data from existing array. 
+- Add data on any middle position on existing array. 
+- Remove from any middle position from existing array. 
+- Write a program to demonstrate forEach (), map (), filter (), reduce () methods on an array. - Write a program to display data from array with for-loop 
+- Check length of array 
+- Display single element of array without loop 
+- Write a JavaScript to demonstrate array de-structuring. 
+7. What is an Object? Write a program to demonstrate built-in and user-defined object with multiple-ways of  creating an object including listed tasks using property and methods from prototype: - Check prototypes of Object() 
+- Add data as a first element on existing object. 
+- Add data as a last element on existing object. 
+- Remove first element/data from existing object. 
+- Remove last element/data from existing object. 
+- Add data on any middle position on existing object. 
+- Remove from any middle position from existing object. 
+- Write a program to display data from object with for-loop 
+- Display single element of array without loop 
+- Write a JavaScript to demonstrate object de-structuring.
+8. Design the following form in HTML and display the value in the result box after calculating basic arithmetic  operations based on user input with use of JavaScript. 
+  
+Basic Arithmetic Functions 
+  
+Operand   Operand 
+  
+ADD   SUB   MUL   DIV   MOD 
+  
+Result 
+  
+
+9. Design following form in HTML and write the satisfying following validation rules using JavaScript. a) Check required fields are empty or not on form submission at first. 
+b) Length of full name up to 20 character using normal validation method with keyboard event. b) E-Mail must be valid using Regular Express (additionally: number should be optional). c) Username must be start with string followed by number using Regular Express. 
+d) Password length must be more than eight character using normal method with keyboard event. e) Compare and validate confirm password field data. 
+f) Validate services combo-box (drop-down / select-box) using onchange event. 
+g) Limit message length upto 200 character. 
+  
+Register 
+  
+Full Name*   E-Mail* 
+  
+Username* Password* 
+Services*   🙪 
+Write your comment here. 
+Contrfirm Password* 
+I agree to the Terms and Conditions*
+* Required fields 
+  
+SUBMIT 
+10. Explain Windows and Frames with example writing HTML and JavaScript properly. List all types of frames  and demonstrate applying style like "Background Color", "Text Color", "Font Size", "Width", "Height" and  "Frame Background Color" of content inside frame. 
+11. Write a JavaScript to demonstrate all types of Control Structures. And, explain use of noscript tag with  an example. 
+12. Write a JavaScript to demonstrate all types of Operators. 
+13. Write a HTML, CSS, and JavaScript to create Digital Date/Time. And, demonstrate Math() object also. 
+24th May 2023 06:07:08 AM Wednesday 
+  
+14. Write a program to demonstrate Cookies in JavaScript. 
+15. What is event in JavaScript? List all the common types of event in JavaScript. Write a JavaScript with  HTML to demonstrate events. 
+16. Write a program to demonstrate JavaScript animation. 
+17. Design Chessboard pattern with JavaScript and DOM. 
+  
+18. Write a JavaScript to create listed structure of characters. 
+  
+U 
+U N 
+U N I 
+U N I V 
+U N I V E 
+U N I V E R 
+U N I V E R S 
+U N I V E R S I 
+U N I V E R S I T 
+U N I V E R S I T Y
+19. Demonstrate JavaScript Window Load and Document Content Ready (page and window) event. Introduce jQuery. Write script to demonstrate jQuery. 
+20. Explain JS Types. And, JS Data Types with an example including comment types 
+21. Explain JavaScript closure and hoisting, variable scope and callback function, object literals vs.  constructor with example. 
+22. Explain Template Literals/String and eval() method with an example. 
+23. Write a JavaScript to demonstrate Spread Operator, Rest Parameter and Function on variable. Explain  Exception Handling with an example including Try-Catch. 
+24. Explain JavaScript Errors types with an example including built-in error constructors. 
+25. Explain Regular Expression on JavaScript with an example.

@@ -1,0 +1,29 @@
+<!-- 4. Write a JavaScript to show/hide paragraph content.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 || Show hide</title>
+</head>
+<body>
+    <div class="container">
+        <p id="para1">This is paragraph. Here is there is bear.</p>
+    </div>
+
+    <div class="btns">
+        <button onclick="show()">Show</button>
+        <button onclick="hide()">Hide</button>
+    </div>
+
+    <script>
+        function show(){
+            document.getElementById('para1').style.display ='block';
+        }
+
+        function hide(){
+            document.getElementById('para1').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

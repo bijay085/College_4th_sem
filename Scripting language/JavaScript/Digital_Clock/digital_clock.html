@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock</title>
+</head>
+
+<body>
+    <div id="date"></div>
+    <script>
+        setInterval(function () {
+
+            let date = new Date();
+            let year = date.getFullYear(),
+                month = date.getMonth(), //if number to print : date.getMonth() +1;
+                mDay = date.getDate(),
+                wDay = date.getDay(),  //If we need to print number :: date.getDay() +1;
+                hour = date.getHours(),
+                minute = date.getMinutes(),
+                second = date.getSeconds();
+
+            let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            let months = ["January", "Feb", "March", "April", "May", "June", "July", "August", "Septemper", "October", "November", "December"];
+            // 1000 ms = 1 desc
+
+            var ampm = (hour <= 12)? "AM" : "PM";
+
+            hour = (hour < 12) ? hour : (hour-12);
+
+            let fullDate = ` ${months[month]} ${mDay}, ${year} ${hour}:${minute}:${second} ${ampm}, ${days[wDay]}  `;
+            document.getElementById("date").innerText = fullDate;
+
+            // if(hour>=12){
+            //     hour=hour-12;
+            //     let fullDate = ` ${months[month]} ${mDay}, ${year} ${hour}:${minute}:${second} PM, ${days[wDay]}  `;
+            //     document.getElementById("date").innerText = fullDate;
+                
+            // }
+            // else{
+
+            //     let fullDate = ` ${months[month]} ${mDay}, ${year} ${hour}:${minute}:${second} AM, ${days[wDay]}  `;
+            //     document.getElementById("date").innerText = fullDate;
+            // }
+    
+        }, 1000);
+
+        
+
+    </script>
+</body>
+
+</html>

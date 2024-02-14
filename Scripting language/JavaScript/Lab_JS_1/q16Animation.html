@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>JavaScript || Animation || Q16 </title>
+ <style>
+  #box {
+   width: 50px;
+   height: 50px;
+   background-color: black;
+   position: absolute;
+  }
+ </style>
+</head>
+
+<body>
+
+ <h1>JavaScript Animation Q16</h1>
+
+ <div id="box"></div>
+
+ <script>
+
+  // Get the box element
+  let box = document.getElementById('box');
+
+// Set initial position
+let position = 0;
+let direction = 1; // 1 for forward, -1 for backward
+
+// Function to update the position and animate
+function animate() {
+    // Update position based on the direction
+    position = position + (9 * direction);
+
+    // Set new position
+    box.style.left = position + 'px';
+
+    // Check if the box has reached the end (1300px or 0px) and reverse direction
+    if (position >= 1300 || position <= 0) {
+        direction *= -1; // Reverse the direction
+    }
+
+    // Request next animation frame
+    requestAnimationFrame(animate);
+}
+
+// Start the animation
+animate();
+
+// with the help of internet 
+</script>
+</body>
+
+</html>

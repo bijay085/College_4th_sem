@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #img {
+            background-image: url('Fan.png');
+            width: 200px;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            margin-left: 30px;
+            border: 20px solid aqua;
+            padding: 52px;
+            border-radius: 50%;
+            animation: fananim linear infinite;
+        }
+
+        button {
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            padding: 5px 10px;
+            margin: 10px 10px;
+            font-size: 15px;
+            font-weight: 550;
+            border: none;
+            background-color: silver;
+            border-radius: 50%;
+            transition: 0.1s;
+        }
+
+        button:active {
+            box-shadow: 0px 10px 10px black;
+            transform: scale(0.95);
+        }
+
+        .main button:nth-last-child(5) {
+            background-color: rgb(0, 255, 0);
+        }
+
+        .main button:nth-last-child(4) {
+            background-color: red;
+        }
+        .main button:nth-last-child(3) {
+            background-color: rgb(164, 213, 103);
+        }
+        .main button:nth-last-child(2) {
+            background-color: rgb(113, 191, 191);
+        }
+        .main button:nth-last-child(1) {
+            background-color: rgb(5, 64, 69);
+        }
+
+        @keyframes fananim {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div id="img"></div>
+        <button onclick="myfunon()">ON</button>
+        <button onclick="myfunoff()">OFF</button>
+        <button onclick="myfun1()">1</button>
+        <button onclick="myfun2()">2</button>
+        <button onclick="myfun3()">3</button>
+    </div>
+
+    <script>
+        let a = document.getElementById("img");
+
+        function myfunon() {
+            a.style.animationDuration = "3s";
+        }
+
+        function myfunoff() {
+            a.style.animationDuration = "0s";
+        }
+
+        function myfun1() {
+            a.style.animationDuration = "1s";
+        }
+
+        function myfun2() {
+            a.style.animationDuration = "0.5s";
+        }
+
+        function myfun3() {
+            a.style.animationDuration = "0.1s";
+        }
+    </script>
+</body>
+
+</html>

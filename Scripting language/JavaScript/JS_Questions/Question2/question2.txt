@@ -1,0 +1,2 @@
+1. WS to show and hide paragraph using JS 
+2. WS to demonstrate cookie string converting in an array 

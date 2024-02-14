@@ -1,0 +1,63 @@
+<!-- // 3. Write script to demonstrate popup boxes in JavaScript. And, write script to change background color of  <p> tag on button click & append <span> as childnode of <p> creating from JS to demonstrate prepend &  remove DOM element with JS. 
+
+//1st part  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+
+    <style>
+        span{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="paragraphContent">
+        <p id="para1">This is the first paragraph. <span id="spaaaan">This is spaned line.</span>This is normal paragraph.</p>
+        <!-- now making buttons for doing tasks  -->
+        <button onclick="changeColor()">Change color</button>
+        <button onclick="appendSpan()">Append Span</button>
+        <button onclick="removeDomElement()">Remove Dom element</button>
+
+    </div>
+
+    <script>
+        //1st part showing popup boxes
+        alert("Nothing you only need to enter a number afterward");
+        prompt("Enter a number :");
+        confirm("Are sure for this  ?");
+        //first part complete 
+
+        //second part change the bg color of paragraph
+        function changeColor(){
+            document.getElementById('para1').style.color = "red";
+        }
+
+        //append span
+        function appendSpan(){
+            // console.log('Button clicked');
+            let span = document.createElement('span');
+            span.textContent = 'Appended text/spanned Text';
+            document.getElementById('para1').appendChild(span);
+        }
+
+        //remove DOM element with js 
+        function removeDomElement(){
+            console.log('Button clicked');
+            // as a dom element i am going to remove span
+            let elementToRemoved = document.getElementById('spaaaan');
+
+            if(elementToRemoved){
+                elementToRemoved.remove();
+            }
+            else{
+                console.log("No element as span avaiable to remove");
+            }
+
+        }
+    </script>
+</body>
+</html>

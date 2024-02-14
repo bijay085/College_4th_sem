@@ -1,0 +1,187 @@
+<!-- 9. Design following form in HTML and write the satisfying following validation rules using JavaScript. a) Check required fields are empty or not on form submission at first. 
+b) Length of full name up to 20 character using normal validation method with keyboard event. b) E-Mail must be valid using Regular Express (additionally: number should be optional). c) Username must be start with string followed by number using Regular Express. 
+d) Password length must be more than eight character using normal method with keyboard event. e) Compare and validate confirm password field data. 
+f) Validate services combo-box (drop-down / select-box) using onchange event. 
+g) Limit message length upto 200 character.  
+Register 
+Full Name*   E-Mail* 
+Username* Password* 
+Services*   🙪 
+Write your comment here. 
+Contrfirm Password* 
+I agree to the Terms and Conditions*
+* Required fields 
+SUBMIT  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9 || FORM Validate</title>
+
+    <style>
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form_field {
+            display: flex;
+        }
+
+        fieldset {
+            width: 70vw;
+            /* height: 100vh; */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input {
+            border: 2px solid black;
+            padding: .5rem;
+            gap: 2rem;
+            margin-bottom: 0.7rem;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <fieldset>
+            <legend>Register</legend>
+            <form action="#" method="post" name="rform">
+
+                <div class="form_field">
+                    <input type="text" name="fname" id="fname" value="" placeholder="Full Name"><span>*</span>
+                    <span></span>
+                </div>
+                <div class="form_field">
+                    <input type="text" name="email" id="email" value="" placeholder="E-mail"><span>*</span>
+                </div>
+                <div class="form_field">
+                    <input type="text" name="username" id="username" value="" placeholder="Username"><span>*</span>
+                </div>
+                <div class="form_field">
+                    <input type="password" name="password" id="password" value="" placeholder="Password"><span>*</span>
+                </div>
+                <div class="form_field">
+                    <select id="service" name="service"><span>*</span>
+                        <option value="">Services </option>
+                        <option value="service1">Service1</option>
+                        <option value="service2">Service2</option>
+                        <option value="service3">Service3</option>
+                    </select>
+                </div>
+                <div class="form_field">
+                    <input type="password" name="cpassword" id="cpassword" value=""
+                        placeholder="Confirm Password"><span>*</span>
+                </div>
+                <div class="form_field">
+                    <textarea name="comment" id="comment" cols="30" rows="10"
+                        placeholder="Write your comment here."></textarea>
+                </div>
+                <footer>
+                    <div class="condn">
+                        <input type="checkbox" name="checkbox" id="checkbox">I agree to the <a
+                            href="https://www.example.com">Terms and Conditions</a><span>*</span>
+                    </div>
+                    <div class="field">
+                        <span>*</span>Required fields
+                    </div>
+                    <button type="submit" value="submit">SUBMIT</button>
+
+                </footer>
+            </form>
+        </fieldset>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.forms.rform;
+            const fname = form.fname;
+            const email = form.email;
+            const username = form.username;
+            const password = form.password;
+            const service = form.service;
+            const cpassword = form.cpassword;
+            const comment = form.comment;
+            const checkbox = form.checkbox;
+    
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent form submission for testing
+    
+                // Validation rule a) Check required fields are empty or not
+                const fields = [fname, email, username, password, service, cpassword, checkbox];
+                fields.forEach(field => {
+                    if (field.value.trim() === '') {
+                        field.nextElementSibling.innerText = "Field cannot be empty";
+                        return false; // Prevent further processing if any required field is empty
+                    }
+                    field.nextElementSibling.innerText = ''; // Clear error message if field is not empty
+                });
+    
+                // Validation rule b) Length of full name up to 20 characters
+                if (fname.value.length > 20) {
+                    fname.nextElementSibling.innerText = "Full Name should be less than 20 characters";
+                    return false;
+                }
+    
+                // Validation rule c) E-Mail must be valid using Regular Expression
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email.value)) {
+                    email.nextElementSibling.innerText = "Invalid email format";
+                    return false;
+                }
+    
+                // Validation rule d) Username must start with string followed by number
+                const usernameRegex = /^[a-zA-Z]+[0-9]*$/;
+                if (!usernameRegex.test(username.value)) {
+                    username.nextElementSibling.innerText = "Invalid username format";
+                    return false;
+                }
+    
+                // Validation rule e) Password length must be more than eight characters
+                if (password.value.length < 8) {
+                    password.nextElementSibling.innerText = "Password should be at least eight characters";
+                    return false;
+                }
+    
+                // Validation rule e) Compare and validate confirm password field data
+                if (cpassword.value !== password.value) {
+                    cpassword.nextElementSibling.innerText = "Passwords do not match";
+                    return false;
+                }
+    
+                // Validation rule f) Validate services combo-box (drop-down / select-box)
+                if (service.value === "") {
+                    service.nextElementSibling.innerText = "Please select a service";
+                    return false;
+                }
+    
+                // Validation rule g) Limit message length up to 200 characters
+                if (comment.value.length > 200) {
+                    comment.nextElementSibling.innerText = "Message should not exceed 200 characters";
+                    return false;
+                }
+    
+                // If all validations pass, you can submit the form
+                this.submit();
+            });
+        });
+    </script>
+    
+</body>
+</html>

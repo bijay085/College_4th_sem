@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="game">Now this is what i want <span id="span">This is span</span> </p>
+    <button onclick="color()">Color</button>
+    <button onclick="show()">Show</button>
+    <button onclick="hide()">Hide</button>
+    <button onclick="removeDOMSpan()">removeDOMSpan</button>
+    <button onclick="getDeletedSpan()">get deleted span</button>
+
+    <script>
+        function color() {
+            document.getElementById('game').style.color = 'red';
+        }
+
+        function show(){
+            document.getElementById('game').style.display = 'block';
+        }
+
+        function hide(){
+            document.getElementById('game').style.display = 'none';
+        }
+
+        function removeDOMSpan(){
+            let e = document.getElementById('span');
+            r = e;
+            e.parentNode.removeChild(e);
+            // e.remove();
+        }
+
+        function getDeletedSpan(){
+            document.getElementById('game').appendChild(r);
+        }
+    </script>
+</body>
+</html>

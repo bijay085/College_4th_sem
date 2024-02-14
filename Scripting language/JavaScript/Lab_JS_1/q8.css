@@ -1,0 +1,62 @@
+body{
+    padding-top: 23vh;
+    padding-left: 70vh;
+}
+
+.container{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 520px;
+    justify-content: center;
+}
+
+.box{
+    margin-left: 80px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.input-group{
+    display: flex;
+    padding-bottom: 10px;
+    gap: 10px;
+}
+
+.input-group input[type="text"]{
+    border: 2px solid black; /* Change the thickness as desired */
+    padding: 8px;
+    display:inline-block;
+}
+
+.reslt input[type = "text"]  {
+    border: 2px solid black; /* Change the thickness as desired */
+    padding: 8px;
+}
+.btn button {
+    background-color: rgba(54, 52, 52, 0.903);
+    color: rgb(239, 236, 236); /* Text color */
+    border: none;
+    padding: 8.3px;
+}
+.title, #res{
+    text-align: center;
+}
+
+.btn button:hover {
+    background-color: #282626; /* Change color on hover */
+    color: #fff; /* Text color on hover */
+}
+
+/* Button active/focus effect */
+.btn button:active,
+.btn button:focus {
+    background-color: #0f0c0c; /* Change color when clicked or focused */
+    color: #fff; /* Text color when clicked or focused */
+    outline: none; /* Remove default focus outline */
+}
+
+
+
+
+

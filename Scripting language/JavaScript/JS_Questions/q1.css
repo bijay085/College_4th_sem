@@ -1,0 +1,86 @@
+/* q1.css */
+
+/* Styles for the form container */
+body{
+  background-color: #f0ebeb;
+  padding: 0px;
+}
+.bigConatiner {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5); /* Adding shadow effect */
+    border-radius: 10px; /* Adding border radius for rounded corners */
+    background-color: #fff; /* Setting background color */
+  }
+  
+  /* Styles for headings */
+  .tittle {
+    text-align: center;
+    color: #333;
+  }
+  
+  .wInfo {
+    text-align: center;
+    color: #666;
+  }
+  
+  .info2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for form fields */
+  .formField {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+
+  }
+  .error{
+    color: rgb(240, 63, 63);
+  }
+  input[type="email"],
+  input[type="tel"],
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: auto; 
+    margin-right: 5px;
+    display: flex;
+  }
+  
+  /* Styles for buttons */
+  .btn {
+    text-align: center;
+  }
+  
+  button {
+    padding: 8px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+
+  }
+  
+  button[type="submit"]:hover,
+  button[type="reset"]:hover {
+    background-color: #0056b3;
+   
+  }
+

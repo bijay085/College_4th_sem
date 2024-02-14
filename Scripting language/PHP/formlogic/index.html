@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling</title>
+</head>
+<body>
+    
+    <h1>Form -> Validation -> Logic -> DB</h1>
+    <div class="form-box"><div class="form-box__header">
+        <h2 class="form-box__title">Register User</h2>
+        <div class="text-container">
+            <p>Your information will not be misused.</p>
+        </div>
+    </div>
+    <form action="#" method="post" name="register" no>
+        <div class="field-group">
+            <label for="fullname">Full Name<span class="mendatory">*</span></label>
+            <input type="text" name="fullname" id="fullname" value="">
+            <span class="error"></span>
+        </div>
+        <div class="field-group">
+            <label for="email">E-mail<span class="mendatory">*</span></label>
+            <input type="text" name="email" id="email" value="">
+            <span class="error"></span>
+        </div>
+        <div class="field-group">
+            <label for="phone">Phone number</label>
+            <input type="text" name="phone" id="phone" value="">
+            <span class="error"></span>
+        </div>
+        <div class="field-group">
+            <label for="address">Addressnumber</label>
+            <input type="text" name="address" id="address" value="">
+            <span class="error"></span>
+        </div>
+        <div class="field-group">
+            <label for="Photo">Photo</label>
+            <input type="file" name="Photo" id="Photo" value="">
+            <span class="error"></span>
+        </div>
+        <div class="field-group">
+            <label for="bio">Bio<span class="mendatory">*</span></label>
+            <textarea name="bio" id="bio"></textarea>
+            <span class="error"></span>
+        </div>
+        <!-- <div class="field-group"> -->
+            <!-- only one content avaible so no wrap in div  -->
+            <button type="submit" name="register">Register now</button>
+        <!-- </div> -->
+    </form>
+</div>
+</body>
+</html>

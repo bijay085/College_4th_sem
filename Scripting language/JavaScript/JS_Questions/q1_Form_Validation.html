@@ -1,0 +1,59 @@
+<!-- /* Create a contact form anf validate using JS. 
+Fields : - fullname , email, phone, gender, address, message.*/ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q1 form validation</title>
+    <link rel="stylesheet" href="q1.css">
+  </head>
+  <body>
+    <form action="#" method="post" enctype="multipart/form-data" name="mForm">
+      <div class="bigConatiner">
+        <div class="headings">
+          <h1 class="tittle">Nepal Mega college</h1>
+          <h2 class="wInfo">Please full out the form</h2>
+          <div class="info2"><p>All your data are safe.</p></div>
+        </div>
+        <div class="formField">
+          <label for="fname">Full Name</label>
+          <input type="text" name="fname" id="fname" value="" />
+          <span class="error"></span>    <!--Append-->
+        </div>
+        <div class="formField">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" value="" />
+        </div>
+        <div class="formField">
+          <label for="phone">Phone number</label>
+          <input type="tel" name="phone" id="phone" value="" />
+        </div>
+        <div class="formField">
+          <label for="gender">Gender</label>
+          <div class="formSubField">
+            <input type="radio" name="gender" id="male" value="Male" />
+            <label for="male">Male</label>
+          </div>
+          <div class="formSubField">
+            <input type="radio" name="gender" id="female" value="Female" />
+            <label for="female">Female</label>
+          </div>
+        </div>
+        <div class="formField">
+          <label for="address">Address</label>
+          <input type="text" name="address" id="address" value="" />
+        </div>
+        <div class="formField">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="40" rows="5"></textarea>
+        </div>
+        <div class="btn">
+            <button type="submit" name="submit">Sign up</button>
+            <button type="reset" name="reset">Reset</button>
+        </div>
+      </div>
+    </form>
+    <script src="q1.js"></script>
+  </body>
+</html>

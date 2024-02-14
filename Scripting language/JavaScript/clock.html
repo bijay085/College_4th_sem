@@ -1,0 +1,65 @@
+<!-- modern date and time modern clock  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="clock1"></div>
+
+    <script>
+        function Interval() {
+
+            let d = new Date();
+            let taarik = d.getDate(),
+                month = d.getMonth(),
+                year = d.getFullYear();
+
+            let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            let weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+            let hr = d.getHours(),
+                mins = d.getMinutes(),
+                secs = d.getSeconds();
+
+            let day = d.getDay();
+            let amPm = '';
+            if (hr >= 12) {
+                amPm = 'PM';
+            }
+            else {
+                amPm = 'AM';
+            }
+            if (hr > 12) {
+                hr = hr - 12;
+            }
+
+            let daySuffix = '';
+            if (day == 1 || day == 11 || day == 21 || day == 31) {
+                daySuffix = 'st';
+            }
+            else if (day == 2 || day == 12 || day == 22) {
+                daySuffix = 'nd';
+            }
+            else if (day == 3 || day == 13 || day == 23) {
+                daySuffix = 'rd';
+            }
+            else {
+                daySuffix = 'th';
+            }
+
+
+            document.getElementById('clock1').innerHTML = (`${taarik.toString().padStart(2, '0')} <sup>${daySuffix}</sup> ${months[month].toString().padStart(2, '0')} ${year.toString().padStart(2, '0')} <br> ${hr.toString().padStart(2, '0')} : ${mins.toString().padStart(2, '0')} : ${secs.toString().padStart(2, '0')} ${amPm} <br> ${weekdays[day]}`);
+        };
+        setInterval(Interval, 1000);
+        Interval();
+    </script>
+</body>
+
+</html>

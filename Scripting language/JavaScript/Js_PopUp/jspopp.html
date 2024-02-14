@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Popup </title>
+</head>
+<body>
+    
+
+
+    <script>
+        /*
+        JS Popup boxes :
+            1.Alret : result testing
+            2.Prompt : user input
+            3.Comfirm : decision making (boolean; true or flase )
+        */
+
+        alert("Be sure to change password.");
+        confirm("Are you sure you will change the passoword?");
+
+        prompt("What will be your passoword ?");
+        confirm("For sure this will be your password ? ");
+
+        /*
+        q1. WAS to print your name reading from user input.
+        q2. WAS to calculate num1 and num2.
+        */
+
+        let name = prompt("Enter your name ?");
+        document.write(name);
+        let n1 = prompt("Enter number first :") ;
+        let n2 = prompt("Enter number second :");
+
+        /*let n1 = prompt("Enter number first :"),
+              n2 = prompt("Enter number second :");
+        */ 
+       let sum = eval(`${n1} + ${n2}`);
+        document.write(`<hr>${sum}`);
+
+    </script>
+</body>
+</html>

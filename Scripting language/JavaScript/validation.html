@@ -1,0 +1,137 @@
+<!-- validation  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        line-height: 40px;
+    }
+
+    .container {
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 2rem;
+    }
+
+    span {
+        color: red;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <form action="#" method="POST" id="mform" name="mform" enctype="multipart/form-data"
+            onsubmit="return validate()">
+            <h1 class="title1">Test Form</h1>
+
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your full name">
+                <span id="errorMsg"></spanid=>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Enter your email">
+                <span id="errorMsg"></span>
+
+            </div>
+
+            <div class="input-group">
+                <label for="password">password</label>
+                <input type="text" name="password" id="password" placeholder="Enter your password">
+                <span id="errorMsg"></span>
+
+            </div>
+            <div class="input-group">
+                <label for="cpass">Confirm pass</label>
+                <input type="text" name="cpass" id="cpass" placeholder="Enter your pass re">
+                <span id="errorMsg"></span>
+
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" placeholder="Enter your phone number">
+                <span id="errorMsg"></span>
+
+            </div>
+
+            <div class="input-group">
+                <!-- <label for="gender">Gender</label> -->
+                <input type="radio" id="male" name="gender" value="male">Male
+                <span id="errorMsg"></span>
+
+                <input type="radio" id="female" name="gender" value="female">Female
+                <span id="errorMsg"></span>
+
+            </div>
+
+            <div class="input-group">
+                <label for="program">Program</label>
+                <select id="program" name="program">
+                    <option value="2">BCA</option>
+                    <option value="3">BBM</option>
+                </select>
+                <span id="errorMsg"></span>
+
+            </div>
+
+            <div class="input-group">
+                <label for="comment">Comment</label>
+                <textarea rows="5" cols="60" id="comment" name="comment"></textarea>
+                <span id="errorMsg"></span>
+
+            </div>
+
+            <div class="input-group">
+                <label for="photo">Your photo</label>
+                <input type="file" id="photo" name="photo">
+                <span id="errorMsg"></span>
+
+            </div>
+
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </div>
+
+    <script>
+
+        function validate() {
+            var nameRegex = /^[A-Za-z]+$/g;
+            var a = document.getElementById('name').value;
+            if (a == '') {
+                document.getElementById('errorMsg').innerHTML = "*Not want empty";
+                return false;
+            }
+
+            if (a.length > 20 || a.length < 3) {
+                document.getElementById('errorMsg').innerHTML = "*Length dont match";
+                return false;
+            }
+            if (a.match(nameRegex)) {
+                true;
+            }
+            else {
+                    document.getElementById('errorMsg').innerHTML = "Only alphabet";
+                    return false;
+                }
+            
+        }
+    </script>
+</body>
+
+</html>
