@@ -1,3 +1,0 @@
-- no class in Paragraph
-- if content is more than 2 then we need to wrap in a div
-- for trigger id in label
