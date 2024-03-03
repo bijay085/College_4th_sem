@@ -8,17 +8,23 @@ CREATE TABLE Patient(
     pid int AUTO_INCREMENT PRIMARY KEY,
     pfirstname VARCHAR(50) NOT NULL,
     plasttname VARCHAR(50) NOT NULL,
-    insuranceNumber VARCHAR NOT NULL UNIQUE
+    insuranceNumber int UNIQUE NOT NULL
 );
 
 CREATE TABLE Specialization(
     did int NOT NULL,
     description  VARCHAR(100),
-    FOREIGN KEY (pid) REFERNCES Doctor(did)
+    FOREIGN KEY (did) REFERENCES Doctor(did)
 );
 
 CREATE TABLE Diagonse(
     pid int NOT NULL,
     details  VARCHAR(100),
-    FOREIGN KEY (pid) REFERNCES Patient(did)
+    FOREIGN KEY (pid) REFERENCES Patient(pid)
 );
+
+#code to run in terminal
+mysql -u root
+show databases;
+Create database dbname; #db_hospital- in this case
+use  dbname;
