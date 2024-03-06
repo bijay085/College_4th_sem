@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery || Practice</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <!-- this is client side  -->
+    <div class="content">
+        <p>This is para 1</p>
+        <p>This is para 2</p>
+
+        <button type="button" id="js-show">Show</button>
+        <button type="button" id="js-hide">Hide</button>
+        <a href="#" id="js-toggle">Toggle paragraph</a>
+    </div>
+
+    <script>
+        let para = jQuery('p'),
+            jsShow = jQuery('#js-show'),
+            jsHide = jQuery('#js-hide'),
+            jsToggle = jQuery('#js-toggle');
+
+        
+        // show function using click event handler
+        jsShow.on("click",function(){
+            para.show();
+         });
+
+        jsHide.on("click",function(){
+            para.hide();
+         });
+         
+        jsToggle.on("click",function(e){
+            e.preventDefault();
+            para.slideToggle(1000);
+         });
+    </script>
+</body>
+</html>
