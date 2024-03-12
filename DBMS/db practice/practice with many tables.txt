@@ -1,0 +1,65 @@
+#making 2 tables
+#db_hospital
+#tables : patient, doctor, diagonse, specialization
+
+#---------------->patient table<---------------------#
+#insert phone nummber and address in patient table
+
+ALTER TABLE Patient
+ADD phoneNumber VARCHAR (15), ADD address VARCHAR (20) ;
+
+-----> Add foreign key constraint in patient table of doctor table
+ALTER TABLE Patient
+ADD did int  ;
+ALTER TABLE Patient
+ADD FOREIGN KEY (did) REFERENCES doctor(did);
+
+
+#-> delete extra columns
+ALTER TABLE Patient
+DROP COLUMN address2, DROP COLUMN phoneNumber2;
+
+#-> INSERT VALUES IN Patient
+INSERT INTO Patient(pfirstname,	plasttname,	insuranceNumber, phoneNumber,address)
+VALUES ("Kaushal", "Joshi", 738, 98376252526, "Baktapur"), ("Bibek", "Kapali", 28, 937363022, "Baneshwor"),("Saroj", "Bato", 12, 7383893939, "Himalayan");
+
+#---------------->doctor table<---------------------#
+# did	drfirstname	drlasttname
+
+ALTER TABLE doctor
+ADD phoneNumber VARCHAR (15), ADD address VARCHAR (20) ;
+
+#------> Insert
+INSERT INTO Doctor(drfirstname,	drlasttname, phoneNumber, address)
+VALUES ("Dr_Suresh","Khadka",87634876, "Nawalpur"),("Dr_Hari","Dalal",98379723, "Lalbandi"), ("Dr_Girish", "Nalla", 8628761617, "Sarlahi");
+
+
+#---------------->diagonse table<---------------------#
+#---> Insert foregin keys from doctor and patient table
+ALTER TABLE diagonse
+ADD COLUMN did int;
+
+ALTER TABLE diagonse
+ADD COLUMN status BOOLEAN DEFAULT (1);
+
+ALTER TABLE diagonse
+ADD FOREIGN KEY (did) REFERENCES doctor(did);
+
+#-------->Inserting data
+INSERT INTO diagonse(pid,details,did)
+VALUES (5,'Diabeties,Phobea', 2);
+
+#---------------->specialization table<---------------------#
+did	speciality description
+
+ALTER TABLE specialization
+ADD COLUMN speciality VARCHAR (50);
+
+#------> inserting data
+INSERT INTO specialization(did, speciality, description)
+VALUES (2, "Dermatologist", "Skin doctor"), (3, "Dental", "Teeth doctor");
+
+
+
+#---------------->JOINING table<---------------------#
+
