@@ -1,0 +1,22 @@
+# Wordpress :
+
+- visit wordpress.org
+- download and unzip it
+- make a folder inside xampp
+- copy all subfolders and file to new folder inside subfolder of xampp
+- xampp on 
+- make a database 
+- in browser : localhost/folder-path/
+-  setup :
+	username : root
+	password : 
+	localhost : localhost:3307 #if port is changed 
+- super user setup :
+	projecttitle : 
+	username : 
+	password : 
+	email : 
+-log out
+- to login : http://localhost/nmcwp/wp-login
+
+task : post page appearance theme
