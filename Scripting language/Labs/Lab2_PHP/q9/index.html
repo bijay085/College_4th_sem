@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check Unique Phone Number</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h2>Check Unique Phone Number</h2>
+<form id="phoneForm">
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" required>
+    <span id="phone-result"></span><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+$(document).ready(function(){
+    $('#phone').on('keyup', function() {
+        var phone = $(this).val();
+        if (phone.length > 0) {
+            $.ajax({
+                url: 'check_phone.php',
+                type: 'POST',
+                data: {phone: phone},
+                success: function(response) {
+                    var result = JSON.parse(response);
+                    if (result.unique) {
+                        $('#phone-result').text('Phone number is available').css('color', 'green');
+                    } else {
+                        $('#phone-result').text('Phone number is already taken').css('color', 'red');
+                    }
+                }
+            });
+        } else {
+            $('#phone-result').text('');
+        }
+    });
+
+    $('#phoneForm').on('submit', function(event) {
+        var phone = $('#phone').val();
+        if ($('#phone-result').text() === 'Phone number is already taken') {
+            event.preventDefault();
+            alert('Please enter a unique phone number.');
+        }
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!-- 9. Write PHP Script to validate, store, list, update, and delete record from database using MySQL database  with following fields. 
+- ID 
+- Name 
+- Rank 
+- Status 
+- Image 
+- Created_by 
+- Updated_by  
+- Created_at 
+- Updated_at  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Form</title>
+</head>
+<body>
+<h2>User Form</h2>
+<form action="save_user.php" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="ID" id="ID">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="rank">Rank:</label>
+    <input type="text" id="rank" name="rank" required><br><br>
+    <label for="status">Status:</label>
+    <select id="status" name="status" required>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+    </select><br><br>
+    <label for="image">Image:</label>
+    <input type="file" id="image" name="image" accept="image/*" required><br><br>
+    <label for="created_by">Created by:</label>
+    <input type="text" id="created_by" name="created_by" required><br><br>
+    <input type="submit" value="Save">
+</form>
+</body>
+</html>
