@@ -36,7 +36,6 @@ CREATE TABLE treatment (
 
 
 -- 1. Write a query to list patient name with their assigned doctor name.
-
 SELECT
     patient.name AS patient_name,
     doctor.name AS doctor_name
@@ -53,7 +52,6 @@ JOIN patient p ON t.patient_id = p.patient_id
 WHERE p.name = 'Hari';
 
 -- 3 write a query to list the expired medicine name
-
 SELECT 
     medicine.name AS medicine_name
 FROM    
@@ -64,7 +62,7 @@ WHERE expdate < CURDATE();
 SELECT 
     name AS doctor_name
 FROM doctor
-WHERE name LIKE 'S__B%';
+WHERE name LIKE 'S_B%';
 
 -- 5 write a query to list doctors those are  not assigned yet to a patient 
 SELECT 
