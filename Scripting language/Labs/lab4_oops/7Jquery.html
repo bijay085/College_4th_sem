@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Events and Methods</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Events and Methods Example</h1>
+
+    <button id="showButton">Show</button>
+    <button id="hideButton">Hide</button>
+    <button id="toggleButton">Toggle</button>
+    <button id="cssButton">Change Color</button>
+    <br><br>
+    <div id="content" class="hidden">
+        This is some content that can be shown or hidden.
+    </div>
+
+    <br><br>
+    <label for="colorSelect">Choose a color:</label>
+    <select id="colorSelect">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+    </select>
+
+    <script>
+        $(document).ready(function() {
+            // Show the content
+            $('#showButton').click(function() {
+                $('#content').show();
+            });
+
+            // Hide the content
+            $('#hideButton').click(function() {
+                $('#content').hide();
+            });
+
+            // Toggle the content
+            $('#toggleButton').click(function() {
+                $('#content').toggle();
+            });
+
+            // Change the text color
+            $('#cssButton').click(function() {
+                $('#content').css('color', 'red');
+            });
+
+            // Change event for the select box
+            $('#colorSelect').change(function() {
+                var selectedColor = $(this).val();
+                $('#content').css('color', selectedColor);
+            });
+        });
+    </script>
+</body>
+</html>
